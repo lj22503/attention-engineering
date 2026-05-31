@@ -1,0 +1,90 @@
+/* ============================================
+   注意力工程 · 品牌设计令牌 v2.0
+   基于 BRAND_GUIDELINES v2.0 (2026-05-29)
+   统一管理所有颜色/字体/间距 token
+   ============================================ */
+
+:root {
+  /* === 配色体系 === */
+  /* 主色 */
+  --accent: #c45a3d;           /* 赭红 - 品牌主色 */
+  --accent-hover: #a84a32;     /* 深赭红 - 悬停反馈 */
+  --accent-dim: rgba(196, 90, 61, 0.15);  /* 赭红淡色 - 背景点缀 */
+
+  /* 背景色 */
+  --bg-main: #faf9f8;          /* 暖白 - 主背景 */
+  --bg-light: #fff;            /* 纯白 - 卡片/亮色区 */
+  --bg-dark: #1a1a1a;          /* 深灰 - 暗色区/footer */
+  --bg-alt: #222;              /* 次深灰 - 交替暗色区 */
+
+  /* 文字色 */
+  --text-primary: #1a1a1a;     /* 深灰 - 标题/主文字 */
+  --text-secondary: #666;      /* 中灰 - 正文 */
+  --text-muted: #999;          /* 浅灰 - 次要信息 */
+  --text-inverse: #fff;        /* 白色 - 暗色区上文字 */
+
+  /* 边框/分割 */
+  --border-light: rgba(0,0,0,0.05);
+  --border-medium: rgba(0,0,0,0.06);
+  --border-heavy: rgba(0,0,0,0.12);
+  --border-inverse: rgba(255,255,255,0.08);
+  --border-inverse-heavy: rgba(255,255,255,0.12);
+
+  /* === 字体系统 === */
+  /* Noto Serif SC - 衬线体，人文感，用于标题 */
+  /* Noto Sans SC - 无衬线，易读，用于正文 */
+  /* 字重：400=Regular / 500=Medium / 600=Semibold / 700=Bold */
+
+  /* === 功能性颜色（无需tokenize） === */
+  /* #fff - 纯白，用于深色区上的按钮/文字，功能性白色，不需要token */
+
+  /* === 间距系统 === */
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 20px;
+  --space-xl: 24px;
+  --space-2xl: 32px;
+  --space-3xl: 40px;
+  --space-4xl: 48px;
+
+  /* 移动端间距（<=768px） */
+  --space-mobile-section: 80px 20px;
+  --space-desktop-section: 96px 40px;
+
+  /* === 组件 token === */
+  /* 卡片 */
+  --card-padding: 24px;
+  --card-radius: 8px;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  --card-shadow-hover: 0 8px 24px rgba(0,0,0,0.08);
+  --card-border: 1px solid var(--border-medium);
+
+  /* 按钮 */
+  --btn-padding: 12px 32px;
+  --btn-radius: 4px;
+  --btn-font-weight: 500;
+
+  /* 导航 */
+  --nav-height: auto;
+  --nav-padding: 20px 0;
+  --nav-link-gap: 32px;
+
+  /* === 动效系统 === */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* === 硬编码颜色修复指南 === */
+/*
+修复前 → 修复后：
+#333 → #1a1a1a (--text-primary)
+#555 → #666 (--text-secondary)
+#888 → #999 (--text-muted)
+#f5f3f0 → #faf9f8 (--bg-main)
+#fff → #fff 或 var(--bg-light)
+#c45a3d → var(--accent)
+#a84a32 → var(--accent-hover)
+rgba(0,0,0,0.04) → rgba(0,0,0,0.04) 已有card-shadow token
+*/

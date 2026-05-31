@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>知识库 · 万有注意力</title>
+  <meta name="description" content="注意力工程知识库 - 理论框架、实战案例、工具模板">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/brand-tokens.css">
+  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/knowledge.css">
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="nav">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+        <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="8" r="2" fill="currentColor"/><path d="M12 13 L10 22 L14 22 Z" fill="currentColor" opacity="0.7"/><path d="M7 5 L4 1" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.5"/><path d="M17 5 L20 1" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.5"/><path d="M6 3 L3.5 0.5" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.3"/><path d="M18 3 L20.5 0.5" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.3"/></svg>
+        <span class="nav-title">万有注意力</span>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">首页</a>
+      <a href="scenarios.html" class="nav-link">场景库</a>
+      <a href="workbench.html" class="nav-link">注意空间</a>
+    </div>
+  </div>
+</nav>
+
+<!-- 知识库主体 -->
+<main class="knowledge-page">
+  <div class="knowledge-container">
+    
+    <!-- 页面标题 -->
+    <div class="page-header">
+      <h1>知识库 · Knowledge Base</h1>
+      <p class="page-subtitle">理论框架 × 实战案例 × 工具模板</p>
+    </div>
+    
+    <!-- 分类 Tab -->
+    <div class="knowledge-tabs">
+      <button class="knowledge-tab active" data-category="theory">
+        <span class="tab-icon">📚</span>
+        <span class="tab-title">理论框架</span>
+        <span class="tab-count">9 篇</span>
+      </button>
+      <button class="knowledge-tab" data-category="cases">
+        <span class="tab-icon">💡</span>
+        <span class="tab-title">实战案例</span>
+        <span class="tab-count">11 篇</span>
+      </button>
+      <button class="knowledge-tab" data-category="tools">
+        <span class="tab-icon">🔧</span>
+        <span class="tab-title">工具模板</span>
+        <span class="tab-count">6 个</span>
+      </button>
+    </div>
+    
+    <!-- 理论框架 -->
+    <div class="knowledge-grid active" id="knowledge-theory">
+      <div class="knowledge-card" onclick="openArticle('theory', 'attention-economy')">
+        <div class="card-icon">📖</div>
+        <div class="card-tag">经典理论</div>
+        <div class="card-title">《注意力经济》核心框架</div>
+        <div class="card-desc">Michael H. Goldhaber 提出：信息丰富 = 注意力匮乏。注意力是稀缺资源。</div>
+        <div class="card-meta">12 分钟 · 必读</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('theory', 'fogg-behavior')">
+        <div class="card-icon">🧠</div>
+        <div class="card-tag">行为科学</div>
+        <div class="card-title">福格行为模型 B=MAP</div>
+        <div class="card-desc">行为 = 动机 × 能力 × 提示。三者缺一，行为不会发生。</div>
+        <div class="card-meta">10 分钟</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('theory', 'peak-end')">
+        <div class="card-icon">📈</div>
+        <div class="card-tag">心理学</div>
+        <div class="card-title">峰终定律</div>
+        <div class="card-desc">人们对体验的记忆 = 峰值 + 终值。过程长短不重要。</div>
+        <div class="card-meta">8 分钟</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('theory', 'thinking-fast-slow')">
+        <div class="card-icon">⚡</div>
+        <div class="card-tag">认知科学</div>
+        <div class="card-title">系统 1 / 系统 2</div>
+        <div class="card-desc">Kahneman 双系统理论：快思考 vs 慢思考。注意力捕获主要作用于系统 1。</div>
+        <div class="card-meta">15 分钟 · 核心</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('theory', 'habit-loop')">
+        <div class="card-icon">🔄</div>
+        <div class="card-tag">习惯科学</div>
+        <div class="card-title">习惯回路 & 习惯四定律</div>
+        <div class="card-desc">提示→渴望→反应→奖赏。如何让注意力行为变成习惯。</div>
+        <div class="card-meta">10 分钟</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('theory', 'ux-laws')">
+        <div class="card-icon">🎨</div>
+        <div class="card-tag">设计原则</div>
+        <div class="card-title">12 条用户体验定律</div>
+        <div class="card-desc">Jakob's Law、Hick's Law、Miller's Law… 设计即注意力管理。</div>
+        <div class="card-meta">12 分钟</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('theory', 'biases')">
+        <div class="card-icon">⚠️</div>
+        <div class="card-tag">决策科学</div>
+        <div class="card-title">9 类决策偏差</div>
+        <div class="card-desc">确认偏误、锚定效应、损失厌恶… 注意力如何被偏差利用。</div>
+        <div class="card-meta">14 分钟</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('theory', 'user-mental-model')">
+        <div class="card-icon">👤</div>
+        <div class="card-tag">产品心理学</div>
+        <div class="card-title">用户心智模型</div>
+        <div class="card-desc">用户不是按你的逻辑思考，而是按他们的经验判断。</div>
+        <div class="card-meta">10 分钟</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('theory', 'attention-closed-loop')">
+        <div class="card-icon">🔁</div>
+        <div class="card-tag">方法论</div>
+        <div class="card-title">注意力闭环：捕获→转化→留存</div>
+        <div class="card-desc">万有注意力核心方法论：四步闭环如何自运转。</div>
+        <div class="card-meta">8 分钟 · 入门必读</div>
+      </div>
+    </div>
+    
+    <!-- 实战案例 -->
+    <div class="knowledge-grid" id="knowledge-cases">
+      <div class="knowledge-card" onclick="openArticle('cases', 'wechat-100k')">
+        <div class="card-icon">📝</div>
+        <div class="card-tag">公众号</div>
+        <div class="card-title">从 0 到 10 万阅读，只做了一件事</div>
+        <div class="card-desc">开口率 18% → 完成率 72% → 返回率 25%。缺口思维写标题。</div>
+        <div class="card-meta">15 分钟</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('cases', 'xiaohongshu-10k')">
+        <div class="card-icon">📕</div>
+        <div class="card-tag">小红书</div>
+        <div class="card-title">从 0 到 1 万粉，我的爆款公式</div>
+        <div class="card-desc">情绪钩子 + 价值密度 + 行动召唤。3 个封面模板直接套用。</div>
+        <div class="card-meta">12 分钟</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('cases', 'course-completion')">
+        <div class="card-icon">🎓</div>
+        <div class="card-tag">知识付费</div>
+        <div class="card-title">完课率从 20% 提升到 65%</div>
+        <div class="card-desc">不是内容问题，是注意力设计问题。四步闭环改造课程营销。</div>
+        <div class="card-meta">10 分钟</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('cases', 'conversion-2to5')">
+        <div class="card-icon">🛒</div>
+        <div class="card-tag">电商</div>
+        <div class="card-title">转化率从 2% 提升到 5%</div>
+        <div class="card-desc">详情页优化清单：信任 + 紧迫 + 行动三要素。</div>
+        <div class="card-meta">12 分钟</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('cases', 'community-60')">
+        <div class="card-icon">👥</div>
+        <div class="card-tag">社群运营</div>
+        <div class="card-title">从死群到日活 60%</div>
+        <div class="card-desc">触发 + 行动 + 奖赏。社群活跃三要素实战。</div>
+        <div class="card-meta">10 分钟</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('cases', 'habit-100days')">
+        <div class="card-icon">💪</div>
+        <div class="card-tag">习惯养成</div>
+        <div class="card-title">从 3 天放弃到坚持 100 天</div>
+        <div class="card-desc">习惯四定律实战：提示→渴望→反应→奖赏。</div>
+        <div class="card-meta">8 分钟</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('cases', 'saas-onboarding')">
+        <div class="card-icon">💻</div>
+        <div class="card-tag">SaaS</div>
+        <div class="card-title">激活率从 10% 到 40%</div>
+        <div class="card-desc">Onboarding 流程优化：目标→行动→反馈。</div>
+        <div class="card-meta">12 分钟</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('cases', 'info-detox')">
+        <div class="card-icon">🧘</div>
+        <div class="card-tag">注意力保护</div>
+        <div class="card-title">信息断食 30 天记录</div>
+        <div class="card-desc">屏幕时间从 6h→3h，深度工作从 1h→3h。真实数据。</div>
+        <div class="card-meta">10 分钟</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('cases', 'finance-attention')">
+        <div class="card-icon">💰</div>
+        <div class="card-tag">金融投资</div>
+        <div class="card-title">从韭菜到稳定盈利</div>
+        <div class="card-desc">投资四象限（风险×知识）。5 分钟自测知道自己的类型。</div>
+        <div class="card-meta">12 分钟</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('cases', 'combo-diaolong')">
+        <div class="card-icon">🔗</div>
+        <div class="card-tag">组合拳</div>
+        <div class="card-title">注意力工程 × 雕龙叙事</div>
+        <div class="card-desc">结构 + 内容 = 完整注意力闭环。互补案例拆解。</div>
+        <div class="card-meta">10 分钟</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('cases', 'personal-brand')">
+        <div class="card-icon">⭐</div>
+        <div class="card-tag">个人品牌</div>
+        <div class="card-title">一个人如何被 10 万人记住</div>
+        <div class="card-desc">注意力记忆点设计：一个符号、一句话、一个动作。</div>
+        <div class="card-meta">8 分钟</div>
+      </div>
+    </div>
+    
+    <!-- 工具模板 -->
+    <div class="knowledge-grid" id="knowledge-tools">
+      <div class="knowledge-card" onclick="openArticle('tools', 'title-checklist')">
+        <div class="card-icon">✅</div>
+        <div class="card-tag">标题工具</div>
+        <div class="card-title">标题三要素自检表</div>
+        <div class="card-desc">缺口 + 锚定 + 承诺。5 分钟写出好标题。</div>
+        <div class="card-meta">免费下载</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('tools', 'risk-test')">
+        <div class="card-icon">📊</div>
+        <div class="card-tag">自测工具</div>
+        <div class="card-title">风险偏好自测表</div>
+        <div class="card-desc">5 分钟知道自己的投资类型：保守/稳健/积极/激进。</div>
+        <div class="card-meta">免费下载</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('tools', 'habit-tracker')">
+        <div class="card-icon">📅</div>
+        <div class="card-tag">习惯工具</div>
+        <div class="card-title">21 天习惯追踪表</div>
+        <div class="card-desc">提示→渴望→反应→奖赏。每日打卡 + 周复盘。</div>
+        <div class="card-meta">免费下载</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('tools', 'community-calendar')">
+        <div class="card-icon">📆</div>
+        <div class="card-tag">运营工具</div>
+        <div class="card-title">社群运营日历模板</div>
+        <div class="card-desc">30 天内容排期 + 互动触发点 + 转化路径。</div>
+        <div class="card-meta">免费下载</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('tools', 'detail-checklist')">
+        <div class="card-icon">🔍</div>
+        <div class="card-tag">优化工具</div>
+        <div class="card-title">详情页优化清单</div>
+        <div class="card-desc">信任 + 紧迫 + 行动。30 项自检，逐项打分。</div>
+        <div class="card-meta">免费下载</div>
+      </div>
+      
+      <div class="knowledge-card" onclick="openArticle('tools', 'attention-audit')">
+        <div class="card-icon">🔬</div>
+        <div class="card-tag">保护工具</div>
+        <div class="card-title">注意力审计表</div>
+        <div class="card-desc">每月一次：屏幕时间、推送数量、深度工作时长。</div>
+        <div class="card-meta">免费下载</div>
+      </div>
+    </div>
+    
+    <!-- 文章详情弹窗 -->
+    <div class="modal-overlay" id="modal-overlay" style="display: none;">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeArticle()">×</button>
+        <div class="modal-body" id="modal-body">
+          <!-- 动态加载文章 -->
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</main>
+
+<!-- 页面底部 -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-copyright-large">© 2024 万有注意力 · 注意力工程实践</div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-cross-promo">
+          <div class="cross-promo-text">💡 注意力解决"怎么让人来"的结构。<br>那来了以后，用什么内容留住他们？</div>
+          <a href="https://diaolong.mangofolio.com" class="cross-promo-link" target="_blank">👉 探访雕龙叙事：故事的底层能力 →</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <div class="footer-copyright">© 2026 万有注意力 · 注意力工程实践</div>
+      <div class="footer-disclaimer">内容仅供参考，不构成任何建议</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/knowledge.js"></script>
+</body>
+</html>
